@@ -5,4 +5,4 @@ test ! -f /srv/spigot/eula.txt && mv /srv/spigot-default/eula.txt /srv/spigot/
 
 cd /srv/spigot/
 
-exec sudo -Hu mcserver java -Xmx$MEMLIMIT -jar spigot.jar --nojline
+exec java -Xmx$MEMLIMIT -jar spigot.jar --nojline
