@@ -1,3 +1,8 @@
-#!/bin/bash
+#!/bin/sh
+
 test ! -f /srv/spigot/spigot.jar && mv /srv/spigot-default/spigot.jar /srv/spigot/
 test ! -f /srv/spigot/eula.txt && mv /srv/spigot-default/eula.txt /srv/spigot/
+
+cd /srv/spigot/
+
+exec sudo -Hu mcserver java -Xmx$MEMLIMIT -jar spigot.jar --nojline
